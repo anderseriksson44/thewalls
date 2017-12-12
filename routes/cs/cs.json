@@ -1,0 +1,60 @@
+{
+"usecase": 
+    {
+        "balance": 
+        {
+            "heading": "Balance",
+            "description": "A Charging system keeps control on your balance in realtime. You have total control of your spendings and can anytime refill your account",
+            "properties":
+                {
+                    "img": "../../static/images/contact2.jpg"
+                } 
+    
+        },
+
+        "rewards": 
+        {
+            "heading": "Rewards",
+            "description": "The operator can decide to reward a user based on several criteras, e.g. based on number of SMSs, number of minutes on voice or type of refill. The reward is given in realtime and can be used immediately",
+            "properties":
+                {
+                    "img": "url.."
+                } 
+        },
+    
+        "realtimebalance": 
+        {
+            "heading": "Realtime Balance",
+            "description": "A Charging system keeps control on your balance in realtime. You have total control of your spendings and can anytime refill your account",
+            "properties":
+                {
+                    "img": "url.."
+                } 
+        }
+    },
+
+"role": 
+{
+    "productmanager": 
+    {
+        "name": "",
+        "img": "url..",
+        "email": "sdfds"
+    },
+
+    "programmanager": 
+    
+    {
+        "name": "",
+        "img": "url..",
+        "email": "sdfds"
+    }
+}
+
+}
+
+
+
+
+
+

@@ -1,0 +1,53 @@
+<html>
+{{>head}}
+    <body class="L0">
+    {{>header}}
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-sm-10 L1" >
+                <div class="row">
+                    <div class="col-sm-4">
+                        <a><img  data-whatever="fiveG" data-toggle="modal" data-target="#exampleModal" class="functions-img" src="../static/images/RTbalance.png"></a>
+                    </div>
+                    <div class="col-sm-4">
+                        <a><img data-toggle="modal" data-target="#myModal" id="2" class="functions-img" src="../static/images/RTawards.png"> </a>
+                    </div>
+                    <div class="col-sm-4">
+                        <a><img data-toggle="modal" data-target="#myModal" id="3" class="functions-img" src="../static/images/ServiceCharging.png"> </a>
+                    </div>
+                </div>
+            </div>
+            {{ productUC }}
+            
+            <!-- Bootstrap modal -->
+            <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
+                <div class="modal-dialog">
+                
+                    <!-- Modal content-->
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            <h4 class="modal-title"></h4>
+                        </div>
+                        <div id="description" class="modal-body">
+                            <p></p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+                
+                </div>
+            </div>
+
+            <div class="col-sm-2">
+                {{>sidebar}}   
+            </div>
+        </div>
+        
+    </div>
+    
+    </body>
+</html>
+
+

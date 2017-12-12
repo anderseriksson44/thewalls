@@ -1,0 +1,225 @@
+
+  
+  #menu-toggle {
+      right: 0px;
+      top: 40%;
+      width: 5px;
+      height: 100px;
+  }
+  #menu-toggle.menutoggled {
+    right: 230px;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+  }
+
+  #wrapper {
+    padding-right: 0;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+  }
+  
+  #wrapper.toggled {
+    padding-right: 250px;
+  }
+  
+  #sidebar-wrapper {
+    z-index: 1000;
+    position: fixed;
+    right: 0;
+    width: 0;
+    height: 100%;
+    margin-right: 250px;
+    overflow-y: auto;
+    background: rgb(161, 48, 48);
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+  }
+
+  #sidebar-fixed {
+    /* z-index: 1000; */
+    position: absolute;
+    top: 0;
+    /* padding-left:80px; */
+    /* right: 0; */
+    width: 98%;
+    height: 100%;
+    left: 0;
+    /* overflow-y: auto; */
+    align-content: center;
+    display: inline-block;
+    background-color: #181818;
+  }
+
+  #mainsidebar-fixed {
+    /* z-index: 1000; */
+    position: absolute;
+    margin-top: 150px;
+    /* right: 0; */
+    width: 250px;
+    height: 100%;
+    margin-left: 20px;
+    /* overflow-y: auto; */
+    
+    align-content: center;
+    display: inline-block;
+  }
+  
+  #wrapper.toggled #sidebar-wrapper {
+    width: 250px;
+  }
+  
+  #page-content-wrapper {
+    width: 100%;
+    position: absolute;
+    padding: 15px;
+  }
+  
+  #wrapper.toggled #page-content-wrapper {
+    position: absolute;
+    margin-right: 150px;
+  }
+  
+  
+  /* Sidebar Styles */
+  
+  .indent {
+    margin-left: 50px;
+  }
+
+  .sidebar-nav {
+    position: absolute;
+    margin-top: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+    padding-top: 50px;
+    width: 97%;
+    height: 97%;
+    list-style: none;
+    background-color: #242424;
+    /* display: block; */
+  }
+  
+  .sidebar-nav li {
+    text-indent: 20px;
+    line-height: 50px;
+    font-size: 40px;
+
+  }
+  
+  .sidebar-nav li a {
+    display: block;
+    text-decoration: none;
+    color: #f2f2f2;
+  }
+  
+  .sidebar-nav li a:hover {
+    text-decoration: none;
+    color: #f2f2f2;
+    background: #0082f0;
+  }
+  
+  .mainsidebar-nav {
+    position: absolute;
+    margin-top: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+    padding-top: 50px;
+    width: 97%;
+    height: 97%;
+    list-style: none;
+    background-color: #242424;
+    /* display: block; */
+  }
+  
+  .mainsidebar-nav li {
+    text-indent: 20px;
+    line-height: 100px;
+    font-size: 40px;
+
+  }
+  
+  .mainsidebar-nav li a {
+    display: block;
+    text-decoration: none;
+    color: #f2f2f2;
+  }
+  
+  .mainsidebar-nav li a:hover {
+    text-decoration: none;
+    color: #f2f2f2;
+    background: #0082f0;
+  }
+  
+  
+  
+  .carouselslidechange{
+    text-decoration: none;
+    color: #fff;
+    background: #008af0;
+  }
+
+  .sidebar-nav li a:active, .sidebar-nav li a:focus {
+    text-decoration: none;
+  }
+  
+  .sidebar-nav>.sidebar-brand {
+    height: 65px;
+    font-size: 18px;
+    line-height: 60px;
+  }
+  
+  .sidebar-nav>.sidebar-brand a {
+    color: #999999;
+  }
+  
+  .sidebar-nav>.sidebar-brand a:hover {
+    color: #fff;
+    background: none;
+  }
+
+  .video-container iframe, .video-container object, .video-container embed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 90%;
+    height: 90%;
+  }
+  
+  .sidebarhide {
+    display: none;
+    transition: .5s duration timing-function delay;
+  }
+  /* @media(min-width: 768px) {
+    #wrapper {
+      padding-left: 0;
+    }
+    #wrapper.toggled {
+      padding-left: 250px;
+    }
+    #sidebar-wrapper {
+      width: 0;
+    }
+    #wrapper.toggled #sidebar-wrapper {
+      width: 250px;
+    }
+    #page-content-wrapper {
+      padding: 20px;
+      position: relative;
+    }
+    #wrapper.toggled #page-content-wrapper {
+      position: relative;
+      margin-right: 0;
+    }
+    .sidebar-nav li {
+      text-indent: 20px;
+      line-height: 50px;
+      font-size: 15px;
+  
+    } */
+  
