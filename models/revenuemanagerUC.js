@@ -3,7 +3,7 @@ const Schema = mongoose.Schema;
 
 // schema
 const MySchema = new Schema({
-    fiveG:{},
+    fiveG: {},
     invoicing: {},
     collaboration:{}
     });

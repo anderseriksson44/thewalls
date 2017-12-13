@@ -5,6 +5,7 @@ const Schema = mongoose.Schema;
 const MySchema = new Schema({
     title:{},
     heading: {},
+    image: {},
     sub_text1:{},
     sub_text2t:{},
     

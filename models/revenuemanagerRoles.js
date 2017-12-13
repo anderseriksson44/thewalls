@@ -3,7 +3,13 @@ const Schema = mongoose.Schema;
 
 // schema
 const MySchema = new Schema({
-    productmanager:{},
+    productmanager:{
+        heading: {},
+        description: {},
+        properties: {
+            img:{}
+        }
+    },
     programmanager: {},
     developer:{}
     });

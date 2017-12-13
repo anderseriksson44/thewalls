@@ -47,15 +47,11 @@ module.exports = (app) => {
 
   app.get('/rm', function (req, res){
     intros.findOne({}, (error,intro) => {
-      console.log(intro.title)
-      var img = intro.image;
-      console.log(img)
       res.render('product', 
       
         {
           product: intro.title,
-          // product_img: img,
-          product_img: "../static/images/products/1A.jpg",
+          product_img: intro.image,
           heading: intro.heading,
           sub_text1: intro.sub_text1,
           sub_text2: intro.sub_text2,
@@ -70,10 +66,8 @@ module.exports = (app) => {
   });
 
   app.get('/rm/what', function (req, res){
-    
     usecase.findOne({}, (error, result) => {
-      
-    res.render('what_RM', 
+      res.render('what_RM', 
       {
         product: "Revenue Manager",
         result: result,
@@ -93,7 +87,8 @@ module.exports = (app) => {
     
     //findOne pics first item in MongoDB array. Only this one is relevant
     roles.findOne({}, (error, result) => {
-    
+      console.log(result)
+      console.log(result.heading)
      res.render('who', 
        {
          product: "Revenue Manager",

@@ -32,12 +32,15 @@ jQuery(document).ready(function ($) {
 
     //Usecases - What it does
 
-      
+    
+
+
     $('#whatModal').on('show.bs.modal', function (event) {
         console.log("modal 1 triggered")
         var button = $(event.relatedTarget) // Button that triggered the modal
         console.log("button", button)
         var uc = button.data('whatever') // Extract info from data-* attributes
+        console.log(uc)
         // If necessary, you could initiate an AJAX request here (and then do the updating in a callback).
         // Update the modal's content. We'll use jQuery here, but you could use a data binding library or other methods instead.
         $.ajax({
@@ -55,13 +58,13 @@ jQuery(document).ready(function ($) {
                 modal.find('.modal-body').text(description)
                 }.bind(this), 
             });
-            showNewinfo(uc)
+            // showNewinfo(uc)
         })
        
 
-        $(document).ready(function(){
-            $('#carousel-example-generic').carousel();
-          });
+        // $(document).ready(function(){
+        //     $('.carousel').carousel();
+        // });
       
      
         //   $(".carousel").swipe({
