@@ -6,33 +6,8 @@ jQuery(document).ready(function ($) {
 
 
 
-    // $.ajax({
-    //     type: "GET",
-    //     url: "/api/rm/", 
-    //     dataType: 'json',
-    //     success: function(result){
-    //         var heading = result[role].heading;
-    //         var description = result[role].description;
-    //         var img = result[role].properties.img;
-    //         console.log(result)
-    //         console.log(img)
-    //         // console.log(heading, description)
-    //         // var img= "../static/images/rm/roles/peter.jpg"
-
-    //         // $(".mySidenav").html("<h1>" + heading + "</h1><p>" + description + "<p>");
-    //         $(".activeimg").attr("src", img)
-        
-    //         $(".sidebar-header").html(heading)
-    //         $(".sidebar-content").html(description)
-            
-    //     }  
-                
-    // })
-
 
     //Usecases - What it does
-
-    
 
 
     $('#whatModal').on('show.bs.modal', function (event) {
@@ -54,32 +29,14 @@ jQuery(document).ready(function ($) {
                 // console.log(heading, description)
                
                 var modal = $(this)
-                modal.find('.modal-title').text(heading)
-                modal.find('.modal-body').text(description)
+                modal.find('.modal-title').html(heading)
+                modal.find('.modal-description').html(description)
                 }.bind(this), 
             });
             // showNewinfo(uc)
         })
        
 
-        // $(document).ready(function(){
-        //     $('.carousel').carousel();
-        // });
-      
-     
-        //   $(".carousel").swipe({
-            
-        //       swipe: function(event, direction, distance, duration, fingerCount, fingerData) {
-            
-        //         if (direction == 'left') $(this).carousel('next');
-        //         if (direction == 'right') $(this).carousel('prev');
-            
-        //       },
-        //       allowPageScroll:"vertical"
-            
-        //     });
-     
-     
      
           // Roles
       

@@ -30,6 +30,8 @@ require('./routes/cs/cs.js')(app);
 require('./routes/rm/rm.js')(app);
 require('./routes/eda/eda.js')(app);
 require('./routes/mcom/mcom.js')(app);
+require('./api/api_rm.js')(app);
+
 
 
 

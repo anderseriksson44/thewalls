@@ -16,16 +16,16 @@
                                 <div class="swiper-wrapper">
                                     <!-- Slides -->
                                 <div class="swiper-slide">
-                                    <div class="carousel_feature" data-whatever="fiveG" data-toggle="modal" data-target="#whatModal">
-                                            <div style="position:relative;background-color:black">
+                                    <div class="carousel_feature" data-whatever="fiveG" data-toggle="modal" data-target="#whatModal" style="position:relative;background-color:black">
+                                            <div>
                                                 <video autoplay loop class="video-indiv" muted>
                                                         <source src="../static/images/rm/functions/city_RM.mp4" type="video/mp4">
                                                 </video>
-                                                <div style="position:absolute;top:0;left:0;padding:40px;">
+                                                <div class="carousel-content">
                                                         <h1>{{result.fiveG.heading}}</h1>
                                                         <p>{{result.fiveG.intro}}</p>
                                                 </div>
-                                                <button class="btn btn-large btn-primary readmorebutton">Read more</button>
+                                                <button class="btn btn-lg btn-primary readmorebutton">Read more</button>
                                             </div>
                                             
                                 
@@ -33,22 +33,28 @@
                                 </div>
                                 <div class="swiper-slide">
                                     <div class="carousel_feature" data-whatever="invoicing" data-toggle="modal" data-target="#whatModal" style="background-image:url({{result.invoicing.properties.img}})">
-                                        <h1>{{result.invoicing.heading}}</h1>
-                                        <p>{{result.invoicing.intro}}</p>
+                                        <div class="carousel-content">
+                                            <h1>{{result.invoicing.heading}}</h1>
+                                            <p>{{result.invoicing.intro}}</p>
+                                        </div>
                                         <button class="btn btn-large btn-primary readmorebutton">Read more</button>
                                     </div>
                                 </div>
                                 <div class="swiper-slide">
                                     <div class="carousel_feature" data-whatever="collaboration" data-toggle="modal" data-target="#whatModal" style="background-image:url({{result.invoicing.properties.img}})">
-                                        <h1>{{result.collaboration.heading}}</h1>
-                                        <p>{{result.collaboration.intro}}</p>
+                                        <div class="carousel-content">
+                                            <h1>{{result.collaboration.heading}}</h1>
+                                            <p>{{result.collaboration.intro}}</p>
+                                        </div>
                                         <button class="btn btn-large btn-primary readmorebutton">Read more</button>
                                     </div>
                                 </div>
                                 <div class="swiper-slide">
                                     <div class="carousel_feature" data-whatever="fiveG" data-toggle="modal" data-target="#whatModal" style="background-image:url({{result.invoicing.properties.img}})">
-                                        <h1>{{result.collaboration.heading}}</h1>
-                                        <p>{{result.collaboration.intro}}</p>
+                                        <div class="carousel-content">
+                                            <h1>{{result.collaboration.heading}}</h1>
+                                            <p>{{result.collaboration.intro}}</p>
+                                        </div>
                                         <button class="btn btn-large btn-primary readmorebutton">Read more</button>
                                     </div>
                                 </div>
@@ -65,23 +71,6 @@
                             
                             
                             
-                            <!-- <div class="container-fluid" align="center">
-                                <div class="section" style="width:1000px"> -->
-                                    <!--   Icon Section   -->
-                                    <!-- <div class="row"> -->
-                                        <!-- <div class="carousel">
-                                            <a class="carousel-item" data-whatever="fiveG" data-toggle="modal" data-target="#whatModal" href="#one!"><img class="functionitem" src="../static/images/rm/functions/Resurs1.png"></a>
-                                            <a class="carousel-item" href="#two!"><img class="functionitem"  src="../static/images/rm/functions/Resurs2.png"></a>
-                                            <a class="carousel-item" href="#three!"><img class="functionitem" src="../static/images/rm/functions/Resurs3.png"></a>
-                                            <a class="carousel-item" href="#four!"><img class="functionitem" src="../static/images/rm/functions/Resurs4.png"></a>
-                                            <a class="carousel-item" href="#five!"><img class="functionitem" src="../static/images/rm/functions/Resurs5.png"></a>
-                                        </div> -->
-                                    <!-- </div> -->
-                                <!-- </div>
-                            </div>
-                                     -->
-                                     
-                        
                           
 
                             <!-- <div class="row">
@@ -113,19 +102,19 @@
                     
                         <!-- Bootstrap modal -->
                         <div class="modal fade" id="whatModal" tabindex="-1" role="dialog" aria-labelledby="whatModalLabel">
-                            <div class="modal-dialog modal-xl">
+                            <div class="modal-dialog modal-xl" >
                             
                                 <!-- Modal content-->
                                 <div class="modal-content">
                                     <div class="modal-header">
-                                        <button type="button" class="close" data-dismiss="modal">&times;</button>
-                                        <h4 class="modal-title"></h4>
+                                        <!-- <button type="button" class="close" data-dismiss="modal">&times;</button> -->
+                                        <h1 class="modal-title"></h1>
                                     </div>
-                                    <div id="description" class="modal-body">
-                                        <p></p>
+                                    <div id="description">
+                                        <p class="modal-description"></p>
                                     </div>
                                     <div class="modal-footer">
-                                        <button type="button" class="btn btn-lg btn-default" data-dismiss="modal">Close</button>
+                                        <button type="button" class="closebutton" data-dismiss="modal">Close</button>
                                     </div>
                                 </div>
                             

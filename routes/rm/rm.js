@@ -14,35 +14,35 @@ const intros = require("../../models/revenuemanagerIntro.js")
 module.exports = (app) => {
   console.log("CS")
 
-  app.get('/api/rm/', function (req, res){
-    intros.findOne({}, (error,intro) => {
-      res.send(intro);
-    });
-  });
+  // app.get('/api/rm/', function (req, res){
+  //   intros.findOne({}, (error,intro) => {
+  //     res.send(intro);
+  //   });
+  // });
   
-  app.get('/api/rm/what', function (req, res){
-    usecase.findOne({}, (error, what) => {
-      res.send(what);
-    });
-  });
+  // app.get('/api/rm/what', function (req, res){
+  //   usecase.findOne({}, (error, what) => {
+  //     res.send(what);
+  //   });
+  // });
   
-  app.get('/api/rm/how', function (req, res){
-    console.log(req.query.component)
-    var component = req.query.component;
-    var query = {};
-    archtitecure.findOne({}, (error, how) => {
-      res.send(how);
-    });
-  });
+  // app.get('/api/rm/how', function (req, res){
+  //   console.log(req.query.component)
+  //   var component = req.query.component;
+  //   var query = {};
+  //   archtitecure.findOne({}, (error, how) => {
+  //     res.send(how);
+  //   });
+  // });
   
-  app.get('/api/rm/who', function (req, res){
-    // console.log(req.query.component)
-    var component = req.query.component;
-    var query = {};
-    roles.findOne({}, (error, role) => {
-      res.send(role);
-    });
-  });
+  // app.get('/api/rm/who', function (req, res){
+  //   // console.log(req.query.component)
+  //   var component = req.query.component;
+  //   var query = {};
+  //   roles.findOne({}, (error, role) => {
+  //     res.send(role);
+  //   });
+  // });
     
 
   app.get('/rm', function (req, res){
@@ -67,7 +67,7 @@ module.exports = (app) => {
 
   app.get('/rm/what', function (req, res){
     usecase.findOne({}, (error, result) => {
-      res.render('what_RM', 
+      res.render('rm/what_RM', 
       {
         product: "Revenue Manager",
         result: result,
@@ -89,7 +89,7 @@ module.exports = (app) => {
     roles.findOne({}, (error, result) => {
       console.log(result)
       console.log(result.heading)
-     res.render('who', 
+     res.render('rm/who_RM', 
        {
          product: "Revenue Manager",
          result: result,
@@ -107,7 +107,7 @@ module.exports = (app) => {
 
     
   app.get('/rm/how', function (req, res){
-    res.render('how_RM', 
+    res.render('rm/how_RM', 
       {
         product: "Revenue Manager",
         product_img: "../static/images/portfolio-4.jpg",

@@ -157,7 +157,6 @@
   }
   
   
-  
   .carouselslidechange{
     text-decoration: none;
     color: #fff;
@@ -195,6 +194,8 @@
     display: none;
     transition: .5s duration timing-function delay;
   }
+
+
   /* @media(min-width: 768px) {
     #wrapper {
       padding-left: 0;
