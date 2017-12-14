@@ -121,7 +121,7 @@ module.exports = (app) => {
   });
 
   app.get('/rm/where', function (req, res){
-    res.render('where_RM', 
+    res.render('rm/where_RM', 
       {
         product: "Revenue Manager",
         product_img: "../static/images/portfolio-4.jpg",

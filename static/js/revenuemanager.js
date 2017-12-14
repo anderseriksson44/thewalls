@@ -163,7 +163,7 @@ jQuery(document).ready(function ($) {
 // -----------------------Architecture - How does it work -------------------------//
 
        
-        $("g").on("click", function(e) {
+        $(".RMarch g").on("click", function(e) {
             // var text = $(e.target)
             // var component = $(this).attr("id");
             // console.log(text)
@@ -199,6 +199,59 @@ jQuery(document).ready(function ($) {
     
 
 // -----------------------Architecture - How does it work -------------------------//
+
+
+// -----------------------Where do you find us -------------------------//
+
+$("#ps2, #ps3, #ps4, #ps5").addClass("highlightfloor")
+$(".building g").not(".highlightfloor").find("polygon", "path").addClass("desaturate")
+       
+
+$(".building g").on("click", function(e) {
+    var text = $(e.target)
+    var component = $(this).attr("id");
+    console.log(text)
+    console.log(component)
+
+    var clicked = $(this) // Button that triggered the modal
+    console.log(clicked)
+    $("#floormodal").modal()
+});
+
+
+
+    // $(this).toggleClass("highlightfloor desaturate")
+    // $(this).siblings().addClass("desaturate")
+    // var component = clicked.data('name') // Extract info from data-* attributes
+
+    // console.log("Myevent", Myevent);
+    // console.log("Component", component)
+//    $("#mySidenav").addClass("openside")
+//    $("#col2").addClass("menuhide")
+//    $(".RMarch").addClass("RMarch_slided");
+
+    // if($("#customermanagement").data(!"clicked"))
+    // $.ajax({
+    //     type: "GET",
+    //     // url: "/api/cs/how?component="+$(this).data("component"), 
+    //     url: "/api/rm/how", 
+    //     dataType: 'json',
+    //     success: function(result){
+            
+    //         var heading = result[component].heading;
+    //         var description = result[component].description;
+    //         console.log
+    //         $("#mySidenav h1").text(heading)
+    //         $("#mySidenav p").text(description)
+            
+    //     }
+    // });
+// });
+
+
+// -----------------------Architecture - How does it work -------------------------//
+
+
 
 
 }); //End  Jquery

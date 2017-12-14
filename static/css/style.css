@@ -488,6 +488,7 @@ html, body {
         width: 100%;
         height: auto;
         background-size: fill;
+        backface-visibility: hidden;
         /* z-index: 0; */
         /* margin-top: 20px;
         margin-left: 20px;
@@ -802,6 +803,26 @@ html, body {
   width: 300px;
   height: auto;
 }
+
+.highlightfloor {
+  transition-delay: 1.5s;
+  transition-duration: 1s;
+  transform: translateX(-60px);
+  z-index: 1000;
+}
+
+.desaturate {
+  transition-delay: 1.6s;
+  transition-duration: 0.8s;
+  filter: grayscale(100%);
+  /* opacity: 0.4; */
+}
+
+
+
+/* .building g {
+  transition: 0.5s; 
+ } */
 
 /* 
 .carousel {
