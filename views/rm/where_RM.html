@@ -13,25 +13,31 @@
                         {{>building}}
                     </div>    
                     
-                    <div id="mySidenav" class="sidenav">
+                    <div id="floordropdown" class="dropdown" align="center">
                             <!-- <href="javascript:void(0)" class="closebtn" onclick="closeslider()">&times;</a> -->
+                           
                             <h1 class="sidebar-header"> Header</h1>
                             <p class="sidebar-content">Here comes the content</p>
+                            <button id="close" type="button" class="dropdownbutton">Close</button>
+                            {{>ps1L}}
+                            
                     </div>
-                                            
-                    <div class="modal fade" id="floormodal" tabindex="-1" role="dialog" aria-labelledby="whoModalLabel">
+                    
+                    
+
+                    <div class="floor_modal fade"  tabindex="-1" role="dialog" aria-labelledby="whoModalLabel">
                             <div class="modal-dialog">
                                 <!-- Modal content-->
-                                <div class="modal-content">
+                                <div class="floor_modal-content">
                                     <div class="modal-header">
                                         <button type="button" class="close" data-dismiss="modal">&times;</button>
-                                        <h4 class="floormodal-title">Modal Header</h4>
+                                        <h4 class="floor_modal-title">Modal Header</h4>
                                     </div>
-                                    <div class="floormodal-body">
+                                    <div class="floor_modal-body">
                                         <p>Some text in the modal.</p>
                                     </div>
                                     <div class="modal-footer">
-                                        <button id="close" type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                        <button id="close" type="button" class="closebutton" data-dismiss="modal">Close</button>
                                     </div>
                                 </div>
                             </div>

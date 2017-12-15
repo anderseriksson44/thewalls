@@ -611,6 +611,7 @@ html, body {
   }
 
 
+
   /* The side navigation menu */
 .sidenav {
   position: absolute;
@@ -805,17 +806,17 @@ html, body {
 }
 
 .highlightfloor {
-  transition-delay: 1.5s;
+  /* transition-delay: 1.5s; */
   transition-duration: 1s;
   transform: translateX(-60px);
-  z-index: 1000;
+  /* z-index: 1000; */
 }
 
 .desaturate {
-  transition-delay: 1.6s;
+  /* transition-delay: 1.6s; */
   transition-duration: 0.8s;
   filter: grayscale(100%);
-  /* opacity: 0.4; */
+  opacity: 0.2;
 }
 
 

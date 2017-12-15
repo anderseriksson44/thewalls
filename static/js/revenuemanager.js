@@ -203,19 +203,39 @@ jQuery(document).ready(function ($) {
 
 // -----------------------Where do you find us -------------------------//
 
-$("#ps2, #ps3, #ps4, #ps5").addClass("highlightfloor")
-$(".building g").not(".highlightfloor").find("polygon", "path").addClass("desaturate")
+$("#ps3, #ps4, #ps5").addClass("highlightfloor")
+$(".building g").not(".highlightfloor").addClass("desaturate")
+
+// $(".building g").not(".highlightfloor").find("polygon", "path").addClass("desaturate")
        
 
 $(".building g").on("click", function(e) {
     var text = $(e.target)
     var component = $(this).attr("id");
-    console.log(text)
+    // console.log(text)
     console.log(component)
 
     var clicked = $(this) // Button that triggered the modal
     console.log(clicked)
-    $("#floormodal").modal()
+    $("#floordropdown").addClass("opendropdown")
+
+    // $("#"+component).attr('transform', 'translate(10 10) rotate(90)');
+    
+    // $("#floormodal").modal()
+});
+
+$(".dropdownbutton").on("click", function (){
+    $("#floordropdown").removeClass("opendropdown");
+
+});
+
+$("#loggin").on("click", function() {
+    $("#mySidenav").addClass("openside");
+})
+
+$("g").on("click", function(e) {
+    var room = $(this).attr("id");
+    console.log(room)
 });
 
 
