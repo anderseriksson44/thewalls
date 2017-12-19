@@ -5,7 +5,9 @@ const Schema = mongoose.Schema;
 const MySchema = new Schema({
     fiveG: {},
     invoicing: {},
-    collaboration:{}
+    charging:{},
+    cloud:{},
+    iot: {}
     });
 
 module.exports =  mongoose.model('rmUC', MySchema, 'RevenuemanagerUC')

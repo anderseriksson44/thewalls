@@ -12,8 +12,8 @@ const archtitecure = require("../models/revenuemanagerArch.js")
 const intros = require("../models/revenuemanagerIntro.js")
 
 module.exports = (app) => {
-  console.log("CS")
-
+  
+ //READ 
   app.get('/api/rm/', function (req, res){
     intros.findOne({}, (error,intro) => {
       res.send(intro);
@@ -27,7 +27,6 @@ module.exports = (app) => {
   });
   
   app.get('/api/rm/how', function (req, res){
-    console.log(req.query.component)
     var component = req.query.component;
     var query = {};
     archtitecure.findOne({}, (error, how) => {
@@ -36,7 +35,6 @@ module.exports = (app) => {
   });
   
   app.get('/api/rm/who', function (req, res){
-    // console.log(req.query.component)
     var component = req.query.component;
     var query = {};
     roles.findOne({}, (error, role) => {
@@ -44,5 +42,10 @@ module.exports = (app) => {
     });
   });
     
+
+  //CREATE
+
+  
+
 
 };

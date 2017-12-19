@@ -11,7 +11,7 @@ const usecase = require("../../models/uc.js")
 const archtitecure = require("../../models/how.js")
 
 module.exports = (app) => {
-  console.log("CS")
+  // console.log("CS")
 
   app.get('/api/cs/what', function (req, res){
     usecase.findOne({}, (error, what) => {
@@ -20,7 +20,7 @@ module.exports = (app) => {
   });
   
   app.get('/api/cs/how', function (req, res){
-    console.log(req.query.component)
+    // console.log(req.query.component)
     var component = req.query.component;
     var query = {};
     archtitecure.findOne({}, (error, how) => {

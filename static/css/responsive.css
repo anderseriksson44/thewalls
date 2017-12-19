@@ -14,10 +14,22 @@
 		margin-left: 30px;
 		margin-top: 30px;
 	}
+	h1 {
+		font-size: 80px;
+	}
+
+	h2 {
+		font-size: 60px;
+	}
+
+	
+	
 	h1.intro {
 		font-size: 200px;
 		color: #fafafa;
 	}
+
+	
 	.introheading {
 		margin-left: 40px;
 		margin-top: 60px;
@@ -119,6 +131,11 @@
 		font-size: 45px;
 	}
 
+	.active-link {
+		text-indent: 30px;
+		background-color: #0082f0;
+	}
+
 	.sidebar-header {
 		margin-left: 40px;
 		/* text-align: center; */
@@ -169,10 +186,42 @@
 		background-size: cover;
 		}
 
-	.RMarch {
-		margin-top: 350px; 
-	}
 	
+/* Architecture */
+
+.arch-heading {
+	margin-top: 80px;
+	margin-left: 50px;
+	margin-right: 800px;
+}	
+.RMarch {
+		width: 2000px;
+		height: auto;
+		margin-top: 200px;
+		transition: 0.5s;
+	  }
+
+	  .RMarch_slided {
+		
+		margin-left: -600px;
+		transition: 0.5s;
+	  }
+
+	  .floorbutton {
+		position: absolute;
+		align-content: center;
+		color: white;
+		background-color: #0082f0;
+		width: 400px;
+		height: 100px;
+		font-family: hilda;
+		font-size: 50px;
+		top: 700px;
+		}
+	  
+/* Where we sit */
+
+
 	.building {
 		width: 2500px;
 		padding: 200px;
@@ -181,6 +230,7 @@
 		margin-left: 250px;
 	}
 
+
 	.floorschetch {
 		width: 800px;
 		height: auto;
@@ -188,22 +238,23 @@
 
 	.floorschetch_L {
 		width: 90%;
-		height: 1000px;
+		height: 90%;
 	}
 
 	.dropdown {
 		position: fixed;
 		height: 0;
-		width: 100%;
+		width: 98%;
 		z-index: 1;
 		top: -100;
 		margin-left: 20px;
 		margin-right: 20px;
 		background-color: white; /* Black*/
 		overflow-x: hidden; /* Disable horizontal scroll */
-		padding-top: 10px; /*Place content 60px from the top */
+		/* padding-top: 10px; Place content 60px from the top */
 		transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
 		opacity: 1;
+		border-radius: 10px;
 		
 	  }
 	  .closebutton {
@@ -217,19 +268,21 @@
 		}
 		
 	  .opendropdown {
-		height:1500px;
+		height:1400px;
+		top: 20px;
 	  }
 
 	.dropdownbutton {
-		position: relative;
+		position: absolute;
 		margin-bottom: 20px;
 		width: 300px;
 		height: 100px;
+		font-size: 40px;
 		color: #fff;
 		background-color: #008af0;
-		align-content: center;
 		z-index: 1;
 		align-items: center;
+		margin-right: 500px;
 		}
 }
 
@@ -371,6 +424,8 @@
 		height: 50%;
 		background-color: #242424;
 		opacity: 1;
+		background-repeat: no-repeat;
+		background-size: cover;
 		/* padding:20px;
 		padding-left: 30px; */
 		
@@ -380,7 +435,8 @@
 		position:absolute;
 		top: 0;
 		left: 0;
-		padding: 20px
+		padding: 20px;
+		text-align: left;
 	  }
 	  
 	  .carousel_feature h1 {

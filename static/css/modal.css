@@ -65,7 +65,8 @@
     height: 1800px;
     width: 3300px;
     font-size: 30pt;
-    margin: 0 auto;
+    margin-left: -700px;
+    margin-top: -200px;
 
   }
   

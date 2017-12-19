@@ -5,7 +5,10 @@
 jQuery(document).ready(function ($) {
 
 
-
+    $('ul li a').click(function(){
+        $('li a').removeClass("active-link");
+        $(this).addClass("active-link");
+    });
 
     //Usecases - What it does
 
@@ -150,6 +153,8 @@ jQuery(document).ready(function ($) {
             // Close sidebar
         $("#mySidenav").on("click", function() {
             $(this).removeClass("openside")
+            $(".RMarch g").find("rect").removeClass("highlight-comp");
+
             $("#col2").removeClass("menuhide")
             $(".RMarch").removeClass("RMarch_slided");
         });
@@ -163,21 +168,26 @@ jQuery(document).ready(function ($) {
 // -----------------------Architecture - How does it work -------------------------//
 
        
-        $(".RMarch g").on("click", function(e) {
+        $(".RMarch g").on("click", function() {
             // var text = $(e.target)
-            // var component = $(this).attr("id");
+            
             // console.log(text)
             // console.log(component)
-
+            
+            $(".RMarch g").find("rect").removeClass("highlight-comp");
+            $(this).find("rect").addClass("highlight-comp")
+            
             var clicked = $(this) // Button that triggered the modal
             console.log(clicked)
             var component = clicked.data('name') // Extract info from data-* attributes
+
 
             // console.log("Myevent", Myevent);
             console.log("Component", component)
            $("#mySidenav").addClass("openside")
            $("#col2").addClass("menuhide")
            $(".RMarch").addClass("RMarch_slided");
+           
 
             // if($("#customermanagement").data(!"clicked"))
             $.ajax({
@@ -193,8 +203,10 @@ jQuery(document).ready(function ($) {
                     $("#mySidenav h1").text(heading)
                     $("#mySidenav p").text(description)
                     
+                    
                 }
             });
+            
         });
     
 
@@ -233,12 +245,40 @@ $("#loggin").on("click", function() {
     $("#mySidenav").addClass("openside");
 })
 
-$("g").on("click", function(e) {
-    var room = $(this).attr("id");
+$(".floorschetch_L g").on("click", function(e) {
+    var room = $(this).data("name");
+    $("g path,polygon").removeClass("showroom")
+    // $("g polygon").removeClass("showroom")
+    
+    $(this).find("path,polygon").addClass("showroom")
+    
     console.log(room)
 });
 
+$(".floorbutton").click(function(){
+    console.log("before if", $(this))
+    if ($(this).attr("class") == "floorbutton" && "clicked" ) {
+        $(this).addClass("clicked")
+        $(this).text("Show RM floors")
+        
+        $(".building g").not(".highlightfloor").removeClass("desaturate")
+        $(".building g.highlightfloor").removeClass("highlightfloor");
 
+
+    } else {
+        console.log("clicked")
+        $("#ps3, #ps4, #ps5").addClass("highlightfloor")
+        $(".building g").not(".highlightfloor").addClass("desaturate")
+        $(this).removeClass("clicked")
+        $(this).text("Show all floors")
+    }
+
+
+    // $(".building g").not(".highlightfloor").toggleClass("desaturate")
+    // $(".building g.highlightfloor").toggleClass("highlightfloor")
+    
+
+})
 
     // $(this).toggleClass("highlightfloor desaturate")
     // $(this).siblings().addClass("desaturate")

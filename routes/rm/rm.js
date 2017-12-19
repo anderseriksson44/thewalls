@@ -13,8 +13,7 @@ const intros = require("../../models/revenuemanagerIntro.js")
 const floors = require("../../models/floors.js")
 
 module.exports = (app) => {
-  console.log("CS")
-
+  
   app.get('/rm', function (req, res){
     intros.findOne({}, (error,intro) => {
       res.render('product', 
@@ -57,9 +56,7 @@ module.exports = (app) => {
     
     //findOne pics first item in MongoDB array. Only this one is relevant
     roles.findOne({}, (error, result) => {
-      console.log(result)
-      console.log(result.heading)
-     res.render('rm/who_RM', 
+      res.render('rm/who_RM', 
        {
          product: "Revenue Manager",
          result: result,
