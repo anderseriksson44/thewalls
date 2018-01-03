@@ -31,7 +31,7 @@ jQuery(document).ready(function ($) {
         $('.carousel').carousel()
 });
        
-    $('#carouselExampleIndicators').on('slide.bs.carousel', function (ev) {
+    $('#myCarousel').on('slide.bs.carousel', function (ev) {
         
         var id = ev.relatedTarget.id;
         console.log(id);

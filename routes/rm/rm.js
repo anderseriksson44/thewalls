@@ -11,6 +11,7 @@ const usecase = require("../../models/revenuemanagerUC.js")
 const archtitecure = require("../../models/revenuemanagerArch.js")
 const intros = require("../../models/revenuemanagerIntro.js")
 const floors = require("../../models/floors.js")
+const location = require ("../../models/revenuemanagerLocation.js")
 
 module.exports = (app) => {
   
@@ -24,10 +25,10 @@ module.exports = (app) => {
           heading: intro.heading,
           sub_text1: intro.sub_text1,
           sub_text2: intro.sub_text2,
-          what: "/rm/what",
-          who: "/rm/who",
-          how: "/rm/how", 
-          where: "/rm/where",
+          what: { url: "/rm/what" },
+          who: { url: "/rm/who" },
+          how: { url: "/rm/how" }, 
+          where: { url: "/rm/where" },
           back: "/rm",
           root: true
         });
@@ -41,11 +42,11 @@ module.exports = (app) => {
         product: "Revenue Manager",
         result: result,
         product_img: "../static/images/products/1A.jpg",
-        header: "What it does",
-        what: "/rm/what",
-        who: "/rm/who",
-        how: "/rm/how",
-        where: "/rm/where",
+        header: "The functionality",
+        what: { url: "/rm/what", active: "active-link" },
+        who: { url: "/rm/who" },
+        how: { url: "/rm/how" },
+        where: { url: "/rm/where" },
         back: "/rm"
       })
     });
@@ -62,12 +63,12 @@ module.exports = (app) => {
          result: result,
          img: content.usecase.balance.properties.img,
          product_img: "../static/images/portfolio-3.jpg",
-         header: "Who we are",
-         what: "/rm/what",
-         who: "/rm/who",
-         how: "/rm/how",
-         where: "/rm/where",
-         back: "/rm"
+         header: "Our roles",
+         what: { url:"/rm/what" },
+         who: { url:"/rm/who", active: "active-link" },
+         how: { url:"/rm/how"},
+         where: { url:"/rm/where"},
+         back: { url:"/rm" }
      })
     })    
   });
@@ -78,27 +79,32 @@ module.exports = (app) => {
       {
         product: "Revenue Manager",
         product_img: "../static/images/portfolio-4.jpg",
-        header: "How it works",
-        what: "/rm/what",
-        who: "/rm/who",
-        how: "/rm/how",
-        where: "/rm/where",
-        back: "/rm"
+        header: "The architecture",
+        what: { url: "/rm/what" },
+        who: { url: "/rm/who" },
+        how: { url: "/rm/how", active: "active-link" },
+        where: { url:"/rm/where" },
+        back: { url: "/rm" }
     })
   });
 
   app.get('/rm/where', function (req, res){
-    res.render('rm/where_RM', 
-      {
-        product: "Revenue Manager",
-        product_img: "../static/images/portfolio-4.jpg",
-        header: "Where we sit",
-        what: "/rm/what",
-        who: "/rm/who",
-        how: "/rm/how",
-        where: "/rm/where",
-        back: "/rm"
+    location.find({}, (error, result) => {
+      console.log(result)
+      res.render('rm/where_RM', 
+        {
+          product: "Revenue Manager",
+          result:result,
+          product_img: "../static/images/portfolio-4.jpg",
+          header: "Where you find us",
+          what: { url: "/rm/what" },
+          who: { url: "/rm/who" },
+          how: { url: "/rm/how" },
+          where: { url: "/rm/where", active: "active-link" },
+          back: { url: "/rm" }
+      })
     })
+    
   });
 
 

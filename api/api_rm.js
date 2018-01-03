@@ -41,11 +41,21 @@ module.exports = (app) => {
       res.send(role);
     });
   });
-    
 
   //CREATE
 
-  
+  // app.post('/api/rm/who', function (req, res){
+  //    var people = {
+  //      product: req.body.product,
+  //      role: req.body.role,
+  //      name: req.body.name,
+  //      descr1: req.body.descr1,
+  //      descr2: req.body.descr2
+  //    }
+  //   send().app()
+  //   });
+  // });
+    
 
 
 };

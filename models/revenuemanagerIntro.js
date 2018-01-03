@@ -7,7 +7,7 @@ const MySchema = new Schema({
     heading: {},
     image: {},
     sub_text1:{},
-    sub_text2t:{},
+    sub_text2:{},
     
     });
 

@@ -16,14 +16,14 @@
                                 <div class="swiper-wrapper">
                                     <!-- Slides -->
                                 <div class="swiper-slide">
-                                    <div class="carousel_feature" align="right" style="background-image:url({{result.fiveG.properties.img}})">
+                                    <div class="swiper_feature" align="right" style="background-image:url({{result.fiveG.properties.img}})">
                                         <div>
                                             
                                             <!-- <video autoplay loop class="video-indiv" muted>
                                                     <source src="../static/images/rm/functions/city_RM.mp4" type="video/mp4">
                                             </video> -->
                                             
-                                            <div class="carousel-content" align="left">
+                                            <div class="swiper-content" align="left">
                                                     <h1>{{result.fiveG.heading}}</h1>
                                                     <p>{{result.fiveG.intro}}</p>
                                                     <p>{{result.fiveG.intro2}}</p>
@@ -34,9 +34,9 @@
                                 </div>
                                
                                 <div class="swiper-slide">
-                                    <div class="carousel_feature" align="right"  style="background-image:url({{result.invoicing.properties.img}})">
+                                    <div class="swiper_feature" align="right"  style="background-image:url({{result.invoicing.properties.img}})">
                                 
-                                        <div class="carousel-content" align="left">
+                                        <div class="swiper_content" align="left">
                                             <h1>{{result.invoicing.heading}}</h1>
                                             <p>{{result.invoicing.intro}}</p>
                                         </div>
@@ -45,8 +45,8 @@
                                  </div>
                                
                                 <div class="swiper-slide">
-                                    <div class="carousel_feature"  align="right" style="background-image:url({{result.charging.properties.img}})">
-                                        <div class="carousel-content" align="left">
+                                    <div class="swiper_feature"  align="right" style="background-image:url({{result.charging.properties.img}})">
+                                        <div class="swiper_content" align="left">
                                             <h1>{{result.charging.heading}}</h1>
                                             <p>{{result.charging.intro}}</p>
                                             <p>{{result.charging.intro2}}</p>
@@ -58,8 +58,8 @@
                                
                                
                                 <div class="swiper-slide">
-                                    <div class="carousel_feature" align="right" style="background-image:url({{result.cloud.properties.img}})">
-                                        <div class="carousel-content" align="left">
+                                    <div class="swiper_feature" align="right" style="background-image:url({{result.cloud.properties.img}})">
+                                        <div class="swiper_content" align="left">
                                             <h1>{{result.cloud.heading}}</h1>
                                             <p>{{result.cloud.intro}}</p>
                                             <p>{{result.cloud.intro2}}</p>
@@ -69,8 +69,8 @@
                                 </div>
                                   
                                 <div class="swiper-slide">
-                                        <div class="carousel_feature" align="right" style="background-image:url({{result.iot.properties.img}})">
-                                            <div class="carousel-content" align="left">
+                                        <div class="swiper_feature" align="right" style="background-image:url({{result.iot.properties.img}})">
+                                            <div class="swiper_content" align="left">
                                                 <h1>{{result.iot.heading}}</h1>
                                                 <p>{{result.iot.intro}}</p>
                                                 <p>{{result.iot.intro2}}</p>
@@ -81,7 +81,7 @@
 
                                 </div>
                                 <!-- Add Pagination -->
-                                <div class="swiper-pagination"></div>
+                                <!-- <div class="swiper-pagination"></div> -->
                             
                             </div>
                             <!-- Add Arrows -->
@@ -95,11 +95,27 @@
                                 <!-- Modal content-->
                                 <div class="modal-content">
                                     <div class="modal-header">
-                                        <!-- <button type="button" class="close" data-dismiss="modal">&times;</button> -->
                                         <h1 class="modal-title"></h1>
                                     </div>
                                     <div id="description">
                                         <p class="modal-description"></p>
+                                        <div class="row">
+                                            <div class="col-sm-6">
+                                                <div class="modalsubcolumn">
+                                                    <p>lkjasfdlksjdflksdjf</p>
+                                                    <img class="roleimg" src="../static/images/rm/functions/carhealth.PNG">                                                                                                            </p>
+
+                                                </div>
+
+                                            </div>
+                                            <div class="col-sm-6">
+                                                <div class="modalsubcolumn">
+                                                    <p>lkjasfdlksjdflksdjf</p>
+                                                    <img class="roleimg" src="../static/images/rm/functions/carhealth.PNG">                                                                                                            </p>
+                                                </div>
+    
+                                            </div>
+                                        </div>
                                     </div>
                                     <div class="modal-footer">
                                         <button align="center" type="button" class="closebutton" data-dismiss="modal">Close</button>
@@ -110,17 +126,9 @@
                         </div>
                     </div>
                 </div>
-                 <!--  Scripts-->
-  <!-- <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script> -->
-  <!-- <script type="text/javascript" src="../static/js/plugins/materialize.js"></script> -->
-  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.0.7/js/swiper.min.js"></script> -->
   
-  <!-- <script src="js/init.js"></script> -->
   <script>
 	  
-	//    $(document).ready(function(){
-    //         $('.carousel').carousel();
-    // });
 
     var swiper = new Swiper('.swiper-container', {
         effect: 'cube',
@@ -146,5 +154,5 @@
       });
   	  
   </script>
-            </body>
-        </html>
+    </body>
+</html>

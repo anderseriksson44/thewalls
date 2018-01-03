@@ -5,9 +5,9 @@
 jQuery(document).ready(function ($) {
 
 
-    $('ul li a').click(function(){
-        $('li a').removeClass("active-link");
-        $(this).addClass("active-link");
+    $('.sidebar-nav li a').on("click", function(){
+        // $('li a').removeClass("active-link");
+        $(this.li).addClass("active-link");
     });
 
     //Usecases - What it does
@@ -43,72 +43,6 @@ jQuery(document).ready(function ($) {
      
           // Roles
       
-   
-   
-   
-   
-    //  $('#whomodal').on('show.bs.modal', function (event) {
-    //     $(".svgobj").animate({"margin-left": "50px"})
-        
-    //     var Myevent = $(event.relatedTarget)
-    //     var button = $(this) // Button that triggered the modal
-    //     var role = Myevent.data('map') // Extract info from data-* attributes
-    //     // If necessary, you could initiate an AJAX request here (and then do the updating in a callback).
-    //     // Update the modal's content. We'll use jQuery here, but you could use a data binding library or other methods instead.
-    //     console.log(role)
-    //     $.ajax({
-    //         type: "GET",
-    //         url: "/api/rm/who", 
-    //         dataType: 'json',
-    //         success: function(result){
-    //             var heading = result[role].heading;
-    //             var description = result[role].description;
-    //             console.log(heading, description)
-    //             var modal = $(this)
-    //             modal.find('.whomodal-title').text(heading)
-    //             modal.find('.whomodal-body').text(description)
-    //         }.bind(this)   
-    //     });
-        
-    // });
-
-
-
-    // $("#whomodal").on("hide.bs.modal", function(){
-    //     $(".svgobj").animate({"margin-left": "620px"})
-    // })
-
-    // $("#image").on('click', function() {
-    //     if ($(this).attr('data-click-state') == 1) {
-    //         $(this).attr('data-click-state', 0)
-    //         frontFlip();
-    //     } else {
-    //         $(this).attr('data-click-state', 1)
-    //         backFlip();
-    //     }
-    //     });
-    
-
-    
-    // function frontFlip() {
-    //     $("#image")
-    //     .css('transform', 'perspective(600px) rotateY(0deg)')
-    //     $("#image")
-    //     .css('transform', 'perspective(600px) rotateY(180deg)')
-    // }
-    
-    // function backFlip() {
-    //     $(".back")
-    //     .css('transform', 'perspective(600px) rotateY(0)')
-    //     $(".front")
-    //     .css('transform', 'perspective(600px) rotateY(-180deg)')
-    // }
-
-        
-        
-
-        
-
 
         
 // -----------------------The Roles -----------------------------//
@@ -159,21 +93,13 @@ jQuery(document).ready(function ($) {
             $(".RMarch").removeClass("RMarch_slided");
         });
 
-// -----------------------The Roles -----------------------------//
-
-
-
+// ---------------------------------------------------------------//
         
 
 // -----------------------Architecture - How does it work -------------------------//
 
        
         $(".RMarch g").on("click", function() {
-            // var text = $(e.target)
-            
-            // console.log(text)
-            // console.log(component)
-            
             $(".RMarch g").find("rect").removeClass("highlight-comp");
             $(this).find("rect").addClass("highlight-comp")
             
@@ -189,7 +115,6 @@ jQuery(document).ready(function ($) {
            $(".RMarch").addClass("RMarch_slided");
            
 
-            // if($("#customermanagement").data(!"clicked"))
             $.ajax({
                 type: "GET",
                 // url: "/api/cs/how?component="+$(this).data("component"), 
@@ -210,7 +135,10 @@ jQuery(document).ready(function ($) {
         });
     
 
-// -----------------------Architecture - How does it work -------------------------//
+// --------------------------------------------------------------//
+
+
+
 
 
 // -----------------------Where do you find us -------------------------//
@@ -238,12 +166,15 @@ $(".building g").on("click", function(e) {
 
 $(".dropdownbutton").on("click", function (){
     $("#floordropdown").removeClass("opendropdown");
+    $("g path,polygon").removeClass("showroom");
 
 });
+
 
 $("#loggin").on("click", function() {
     $("#mySidenav").addClass("openside");
 })
+
 
 $(".floorschetch_L g").on("click", function(e) {
     var room = $(this).data("name");
@@ -254,6 +185,19 @@ $(".floorschetch_L g").on("click", function(e) {
     
     console.log(room)
 });
+
+
+
+$(".modalsidebar-nav li a").on("click", function (){
+    var room = $(this).attr("id");
+    var att= $("g path,polygon").attr(room)
+    console.log(att)
+    $("g path,polygon").find(room).addClass("showroom");
+    // console.log(room)
+})
+
+
+
 
 $(".floorbutton").click(function(){
     console.log("before if", $(this))
@@ -273,40 +217,7 @@ $(".floorbutton").click(function(){
         $(this).text("Show all floors")
     }
 
-
-    // $(".building g").not(".highlightfloor").toggleClass("desaturate")
-    // $(".building g.highlightfloor").toggleClass("highlightfloor")
-    
-
 })
-
-    // $(this).toggleClass("highlightfloor desaturate")
-    // $(this).siblings().addClass("desaturate")
-    // var component = clicked.data('name') // Extract info from data-* attributes
-
-    // console.log("Myevent", Myevent);
-    // console.log("Component", component)
-//    $("#mySidenav").addClass("openside")
-//    $("#col2").addClass("menuhide")
-//    $(".RMarch").addClass("RMarch_slided");
-
-    // if($("#customermanagement").data(!"clicked"))
-    // $.ajax({
-    //     type: "GET",
-    //     // url: "/api/cs/how?component="+$(this).data("component"), 
-    //     url: "/api/rm/how", 
-    //     dataType: 'json',
-    //     success: function(result){
-            
-    //         var heading = result[component].heading;
-    //         var description = result[component].description;
-    //         console.log
-    //         $("#mySidenav h1").text(heading)
-    //         $("#mySidenav p").text(description)
-            
-    //     }
-    // });
-// });
 
 
 // -----------------------Architecture - How does it work -------------------------//

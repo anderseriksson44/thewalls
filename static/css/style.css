@@ -183,9 +183,6 @@ html, body {
   font-size: 60px;
 }
 
-
-
-
   article {
     /*  just a fancy border  */
       position: absolute;;
@@ -224,12 +221,10 @@ html, body {
         transform: translate(-50%, -50%);
 
         }
-      /* .carousel {
-          height: 600px;
-      } */
-      .carousel.carousel-slider {
+    
+    /* ..carousel-slider {
         height: 500px;
-      }
+      } */
 
     .cover-grey {
         background-color: rgb(20, 20, 20);
@@ -734,7 +729,7 @@ html, body {
 	font-size: inherit;
 }
 
-.carousel_feature {
+.swiper_feature {
   /* margin-top: 10px; */
   width: 100%;
   height: 100%;
@@ -746,19 +741,19 @@ html, body {
   
 }
 
-.carousel-content {
+.swiper_content {
   position:absolute;
   top: 0;
   left: 0;
   padding: 40px
 }
 
-.carousel_feature h1 {
+.swiper h1 {
   font-size: 100px;
   
 }
 
-.carousel_feature p {
+.swiper_feature p {
   font-size: 70px;
   margin-left: 20px;
 }
@@ -775,7 +770,7 @@ html, body {
   
   }
 
-.carousel {
+/* .carousel {
   overflow: hidden;
   position: relative;
   width: 100%;
@@ -796,9 +791,9 @@ html, body {
   position: absolute;
   top: 400px;
   left: 0;
-}
+} */
 
-
+/* 
 .swiper-container {
   width: 50%;
   padding-top: 50px;
@@ -809,6 +804,17 @@ html, body {
   background-size: cover;
   width: 300px;
   height: auto;
+} */
+
+.swiper-button-next {
+  height: 200px !important;
+  background-size: 350px 150px;
+  top: 45%
+}
+.swiper-button-prev {
+  height: 200px !important;
+  background-size: 350px 150px;
+  top: 45%;
 }
 
 .highlightfloor {

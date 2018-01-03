@@ -1,0 +1,57 @@
+<html lang="en">
+
+{{>head}}
+<body class="L0">
+{{>header}}
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-2 L1">
+                {{>ka_sidebar}}   
+            </div>
+            <div class="col-sm-10 L1">
+                <div class="container-fluid">
+                    <img class="carousel-img" src={{img}}>
+                            <!-- <div class="swiper-container">
+                             
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide slider1"><img class="slider_img" src="../static/images/carousel/Group 1.png">Slide 1</div>
+                                    <div class="swiper-slide slider1"><img class="slider_img" src="../static/images/carousel/Group 2.png">Slide 2</div>
+                                    <div class="swiper-slide slider1"><img class="slider_img" src="../static/images/carousel/Group 3.png">Slide 3</div>
+                                </div> -->
+                                <!-- Add Arrows -->
+                                <!-- <div class="swiper-button-next"></div>
+                                <div class="swiper-button-prev"></div> -->
+  
+                                <!-- Add Pagination -->
+                                <!-- <div class="swiper-pagination"></div> -->
+                            <!-- </div> -->
+                        <!-- </div> -->
+                     
+                        <!-- </div> -->
+                </div>  
+            </div>
+        </div>
+    </div>
+
+    <script>
+            var swiper = new Swiper('.swiper-container', {
+                loop: true,
+                // effect: "fade",
+                autoplay: {
+                    delay: 7000,
+                    disableOnInteraction: false,
+                },
+                
+                pagination: {
+                    el: '.swiper-pagination',
+                    dynamicBullets: true,
+                },
+                navigation: {
+                    nextEl: '.swiper-button-next',
+                    prevEl: '.swiper-button-prev',
+                },
+            });
+    </script> 
+    </body>
+
+</html>
